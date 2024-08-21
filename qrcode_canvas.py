@@ -26,7 +26,7 @@ class QRCodeFrame(ctk.CTkFrame):
         self.generate_qrcode()
 
     def generate_qrcode(self, *trace_args):
-        global qr_image_tk
+        global qr_image_tk  # i think this needs to be in the same scope as the app's mainloop functtion
         self.qr_image = qrcode.make(self.qrcode_content_variable.get())
         qr_image_resized = self.qr_image.resize((200, 200))
         qr_image_tk = ImageTk.PhotoImage(qr_image_resized)
