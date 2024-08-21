@@ -9,6 +9,8 @@ class App(ctk.CTk):
 
         self.geometry("400x500")
 
+        self.resizable(False, False)
+
         self.colors = {
             "base": "#b0b0b0",
             "primary": "#262626",
